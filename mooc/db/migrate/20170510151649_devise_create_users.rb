@@ -34,9 +34,23 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.timestamps null: false
     end
 
+    add_column :users, :name, :string
+    add_column :users, :date_of_birth, :datetime
+    add_column :users, :is_female, :boolean, default: false
+
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
     # add_index :users, :confirmation_token,   unique: true
     # add_index :users, :unlock_token,         unique: true
+  end
+
+  def self.up
+    change_table :users do |t|
+      t.attachment :avatar
+    end
+  end
+
+  def self.down
+    drop_attached_file :users, :avatar
   end
 end
