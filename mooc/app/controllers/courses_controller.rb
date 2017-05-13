@@ -6,7 +6,9 @@ class CoursesController < ApplicationController
   def index
     @courses = Course.all
   end
-
+# def after_initialize
+#     User_id = current_user.id 
+#   end 
   # GET /courses/1
   # GET /courses/1.json
   def show
@@ -16,6 +18,7 @@ class CoursesController < ApplicationController
   def new
     @course = Course.new
     @users = User.all
+    # @course.User_id = current_user.id
   end
 
   # GET /courses/1/edit
@@ -64,6 +67,8 @@ class CoursesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.

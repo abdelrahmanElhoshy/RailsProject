@@ -16,16 +16,6 @@
     <%= f.text_field :title %>
   </div>
 
-   <div class="field">
-    <%= f.label :User_id %><br>
-    <%= f.collection_select :User_id, @users, :id, :name, include_blank: true %>
-  </div>
-
-
- <!--  <div class="field">
-    <%= f.label :User_id %><br>
-    <%= f.text_field :User_id %>
-  </div> -->
   <div class="actions">
     <%= f.submit %>
   </div>

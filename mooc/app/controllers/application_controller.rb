@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
             devise_parameter_sanitizer.permit(:sign_in) { |u| u.permit(:email, :password) }
             devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:name, :email, :password, :current_password, :is_female, :date_of_birth, :avatar) }
         end
+
+        before_action :set_current_user
+        def set_current_user
+                User.current_user = current_user 
+        end
 end
