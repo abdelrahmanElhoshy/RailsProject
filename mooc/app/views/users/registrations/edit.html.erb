@@ -4,9 +4,9 @@
     <%= devise_error_messages! %>
 
         <div class="form-group">
-        <%= f.label :profile_picture, class: 'col-sm-2 control-label'  %>
+        <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
         <div class="col-sm-6">
-            <%= f.file_field :profile_picture %>
+            <%= f.file_field :avatar%>
         </div>
     </div>
 
@@ -34,7 +34,7 @@
     <div><%= f.check_box :is_female, {}, false %> <%= f.label :is_female, "Male" %> </div>
 
     <div><%= f.label :date_of_birth %><br />
-        <%= f.date_select :date_of_birth %></div>
+        <%= f.date_select :date_of_birth  ,start_year: 1950, end_year: 2017%></div>
 
     <div><%= f.submit "Update" %></div>
     <% end %>
