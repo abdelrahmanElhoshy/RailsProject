@@ -1,0 +1,7 @@
+<% @comments.each do |comment| %>
+
+		<p><%= comment.content %></p>
+		<%= link_to "Delete" ,lecture_comment_path(id: comment.id,lecture_id: comment.lecture), method: :delete  %>
+	<% end %>
+
+	<%= render 'comments/form' %>

@@ -1,6 +1,8 @@
 class Course < ActiveRecord::Base
   belongs_to :User
+  has_many :lectures,dependent: :destroy;
 
+  validates :title, presence: true;  
 
   after_initialize :init
 

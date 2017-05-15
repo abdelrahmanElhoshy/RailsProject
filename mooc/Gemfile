@@ -25,7 +25,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise', '~> 4.2', '>= 4.2.1'
 
+gem 'ckeditor'
+
+gem 'activeadmin', '~> 1.0.0.pre2'
+
 gem 'paperclip', '~> 4.1'
+
+gem 'acts_as_votable', '~> 0.10.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -38,7 +44,9 @@ gem 'paperclip', '~> 4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+ gem 'rspec-rails', '~> 3.5'
+
+ gem 'byebug'
 end
 
 group :development do

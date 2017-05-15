@@ -1,0 +1,15 @@
+require "rails_helper"
+
+
+RSpec.describe Lecture, :type => :model do
+  it "is valid with valid attributes" do
+    expect(Lecture.new).to_not be_valid
+  end
+
+  it "is valid with a course-id" do
+
+  	expect(Lecture.new(Course_id: 'abc')).to be_valid
+
+  end
+
+end

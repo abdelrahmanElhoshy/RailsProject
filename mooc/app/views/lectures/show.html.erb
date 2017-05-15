@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= raw @lecture.content.html_safe %>
+</p>
+
+  <strong>Course:</strong>
+  <%= @lecture.Course.title %>
+</p>
+
+ <strong>Attach_file_name : </strong>
+  <%= link_to 'download' ,  @lecture.attach.url %>
+</p>
+
+
+
+<h3>Comments:</h3>
+<%= render 'comments/comment' %><br>
+
+
+<%= link_to 'Edit', edit_lecture_path(@lecture) %> |
+<%= link_to 'Back', lectures_path %>
